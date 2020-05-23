@@ -4,8 +4,11 @@
 struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
-    void closeWindows();
-    void setSpeed(int s) override;
+    
+    ~SemiTruck() override;
+    SemiTruck(const SemiTruck&);
+    SemiTruck& operator = (const SemiTruck&);
 
-    void tryToEvade();
+    void turnRadioOn();
+    void pullOver();
 };

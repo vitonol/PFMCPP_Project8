@@ -123,19 +123,26 @@ int main()
      */
     cars.emplace_back("victor");
     cars.emplace_back("josh");
+    
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
-     motorcycles.reserve(3);
-     trucks.reserve(3);
+    motorcycles.reserve(3);
+    trucks.reserve(3);
 
-     motorcycles.emplace_back("mtrcl_01");
-     motorcycles.emplace_back("mtrcl_02");
-     motorcycles.emplace_back("mtrcl_03");     
+    motorcycles.emplace_back("mtrcl_01");
+    motorcycles.emplace_back("mtrcl_02");
+    motorcycles.emplace_back("mtrcl_03");
+    
+    /*
+    Motorcycle fastMotor;
+    fastMotor.setSpeed(250);
+    highway.addVehicle(&fastMotor);
+    */
 
-     trucks.emplace_back("truck_01");
-     trucks.emplace_back("truck_02");
-     trucks.emplace_back("truck_03");
+    trucks.emplace_back("truck_01");
+    trucks.emplace_back("truck_02");
+    trucks.emplace_back("truck_03");
     
     //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }

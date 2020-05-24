@@ -6,6 +6,8 @@
 
 struct Motorcycle : public Vehicle
 {
+    //Motorcycle();
+
     Motorcycle(const std::string& n);
     
     void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );

@@ -1,5 +1,6 @@
 #include "Motorcycle.h"
 
+//Motorcycle::Motorcycle() : Vehicle("Motorcycle") { }
 Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
 void Motorcycle::lanesplitAndRace( int topSpeed )

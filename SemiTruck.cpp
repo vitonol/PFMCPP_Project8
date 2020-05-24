@@ -10,7 +10,7 @@ SemiTruck& SemiTruck::operator = (const SemiTruck&) = default;
 void SemiTruck::turnRadioOn()
 {
     setSpeed(55);
-    std::cout << name << "NEXT song is 'Country Boy' by Alan Jackson" << std::endl;
+    std::cout << name << "' NEXT song is 'Country Boy' by Alan Jackson" << std::endl;
 }
 
 void SemiTruck::pullOver()

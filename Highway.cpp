@@ -1,6 +1,10 @@
 #include "Highway.h"
-
 #include <cassert>
+#include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+
 
 void Highway::changeSpeed(int newSpeed)
 {
@@ -14,15 +18,15 @@ void Highway::changeSpeed(int newSpeed)
 void Highway::addVehicleInternal(Vehicle* v)
 {
     //assert(false);
-   if(Car* car = dynamic_cast<Car*>(v))
+   if(auto* car = dynamic_cast<Car*>(v))
    {
         car->closeWindows();
    }
-    else if(Motorcycle* mtrcl = dynamic_cast<Motorcycle*>(v))
+    else if(auto* mtrcl = dynamic_cast<Motorcycle*>(v))
     {
         mtrcl->lanesplitAndRace(140);
     }
-    else if (SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
+    else if (auto* truck = dynamic_cast<SemiTruck*>(v))
     {
         truck->turnRadioOn();
     }
@@ -33,15 +37,15 @@ void Highway::addVehicleInternal(Vehicle* v)
 
 void Highway::removeVehicleInternal(Vehicle* v)
 {
-    if(Car* car = dynamic_cast<Car*>(v))
+    if(auto* car = dynamic_cast<Car*>(v))
     {
         car->tryToEvade();
     }
-    else if(Motorcycle* mtrcl = dynamic_cast<Motorcycle*>(v))
+    else if(auto* mtrcl = dynamic_cast<Motorcycle*>(v))
     {
         mtrcl->tryToEvade();
     }
-    else if (SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
+    else if (auto* truck = dynamic_cast<SemiTruck*>(v))
     {
         truck->pullOver();
     }

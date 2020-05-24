@@ -1,15 +1,10 @@
 #pragma once
 
-#include "Car.h"
-#include "Motorcycle.h"
-#include "SemiTruck.h"
-
 #include <vector>
 #include <algorithm>
-#include "Vehicle.h"
 
-struct HighwayPatrol;
 struct Vehicle;
+struct HighwayPatrol;
 
 struct Highway
 {
